@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.github.lppedd"
-version = "0.8.2"
+version = "0.8.3"
 
 repositories {
   mavenCentral()
@@ -21,14 +21,16 @@ dependencies {
 }
 
 intellij {
-  version.set("IU-201.6668.113")
+  version.set("2021.1.3")
+  type.set("IU")
   downloadSources.set(true)
   pluginName.set("idea-conventional-commit")
   plugins.set(listOf(
       "java",
+      "org.jetbrains.plugins.go:211.7628.1",
       "JavaScriptLanguage",
-      "Pythonid:201.6668.113",
-      "com.jetbrains.php:201.6668.113"
+      "Pythonid:211.7628.8",
+      "com.jetbrains.php:211.7442.50"
   ))
 }
 

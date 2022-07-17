@@ -1,0 +1,20 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <codeInsight.lineMarkerProvider
+        language="go"
+        implementationClass="com.github.lppedd.highlighter.go.GoReturnLineMarkerProvider"
+    />
+    <annotator
+        language="go"
+        implementationClass="com.github.lppedd.highlighter.go.GoReturnAnnotator"
+    />
+    <applicationConfigurable
+        parentId="preferences.ReturnHighlighter"
+        id="preferences.ReturnHighlighter.go"
+        key="rh.settings.go"
+        bundle="messages.ReturnHighlighterBundle"
+        instance="com.github.lppedd.highlighter.go.GoReturnHighlighterConfigurable"
+    />
+    <applicationService serviceImplementation="com.github.lppedd.highlighter.go.GoReturnHighlighterConfig" />
+  </extensions>
+</idea-plugin>
